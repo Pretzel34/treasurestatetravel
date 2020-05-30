@@ -1,0 +1,120 @@
+<div class="mobile-nav">
+    <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+</div>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo mr-auto"><a href="index.html"><img src="assets/logo4.png" height="100" width="220" /></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav class="nav-menu d-lg-block">
+            <ul>
+                <li *ngIf="!showMobileView" [className]="activeClass == 'homeComponent' ? 'active' : '' "><a
+                        href="javascript://" (click)="scrollToElement(home)">Home</a></li>
+                <li *ngIf="!showMobileView" [className]="activeClass == 'aboutusComponent' ? 'active' : '' "><a
+                        href="javascript://" (click)="scrollToElement(aboutUs)">About</a></li>
+                <li *ngIf="!showMobileView" [className]="activeClass == 'servicesComponent' ? 'active' : '' "><a
+                        href="javascript://" (click)="scrollToElement(services)">Services</a></li>
+                <li *ngIf="!showMobileView" [className]="activeClass == 'contactComponent' ? 'active' : '' "><a
+                        href="javascript://" (click)="scrollToElement(contactUs)">Contact</a></li>
+                <li *ngIf="showMobileView" class="drop-down">
+                    <a href="javascript://">
+                        <fa-icon [icon]="faBars" (click)="openMobileView = true"></fa-icon>
+                    </a>
+                    <ul>
+                        <li [className]="activeClass == 'homeComponent' ? 'active' : '' "><a href="javascript://"
+                                (click)="scrollToElement(home)">Home</a></li>
+                        <li [className]="activeClass == 'aboutusComponent' ? 'active' : '' "><a href="javascript://"
+                                (click)="scrollToElement(aboutUs)">About</a></li>
+                        <li [className]="activeClass == 'servicesComponent' ? 'active' : '' "><a href="javascript://"
+                                (click)="scrollToElement(services)">Services</a></li>
+                        <li [className]="activeClass == 'contactComponent' ? 'active' : '' "><a href="javascript://"
+                                (click)="scrollToElement(contactUs)">Contact</a></li>
+                    </ul>
+                </li>
+                <!-- <li *ngIf="showMobileView" class="mobile-view">
+                    <button> </button>
+
+                </li> -->
+            </ul>
+        </nav>
+
+        <!-- .nav-menu -->
+
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Sections -->
+<div #home id="homeComponent">
+    <app-home></app-home>
+</div>
+<div #aboutUs id="aboutusComponent">
+    <app-about-us></app-about-us>
+</div>
+<div #services id="servicesComponent">
+    <app-services></app-services>
+</div>
+<div #contactUs id="contactComponent">
+    <app-contact-us></app-contact-us>
+</div>
+<!-- End Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-top" style="background-image: url('assets/footer-bg-min.jpg');">
+        <div class="container">
+            <div class="row pull-right">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Treasure State Travel</h3>
+                    <p>
+                        1118 Minuteman St, <br>
+                        Billings Mt 59105<br>
+                        United States <br><br>
+                        <strong>Phone:</strong> +1 (406) 853-3007<br>
+                        <strong>Email:</strong> treasurestatetravel@gmail.com<br>
+                        <button class="btn m-0 p-0">
+                            <a href="https://www.facebook.com/treasurestatetravel/"><img src="assets/fb.png" height="20"
+                                    width="30" /></a>
+                        </button>
+                        <button class="btn m-0 p-0">
+                            <a href="https://www.facebook.com/treasurestatetravel/"><img src="assets/linkedin.png"
+                                    height="21" width="30" /></a>
+                        </button>
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>
+                            <fa-icon [icon]="faChevronRight"></fa-icon>&nbsp; <a href="javascript://"
+                                (click)="scrollToElement(home)">Home</a>
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faChevronRight"></fa-icon>&nbsp; <a href="javascript://"
+                                (click)="scrollToElement(aboutUs)">About us</a>
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faChevronRight"></fa-icon>&nbsp; <a href="javascript://"
+                                (click)="scrollToElement(services)">Services</a>
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faChevronRight"></fa-icon>&nbsp; <a href="javascript://"
+                                (click)="scrollToElement(contactUs)">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</footer><!-- End Footer -->
