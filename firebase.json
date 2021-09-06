@@ -1,6 +1,11 @@
 {
   "hosting": {
     "public": "dist/preston",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",
